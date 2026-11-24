@@ -1,0 +1,158 @@
+
+   Hoja de estilos externa para index.html */
+
+:root {
+    --oscuro: #101321;
+    --azul: #1b2440;
+    --claro: #f8f4ed;
+    --rosa: #f37b9d;
+    --naranja: #ffbe82;
+    --texto: #252638;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+    margin: 0;
+    background-color: var(--claro);
+    color: var(--texto);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+}
+
+a { text-decoration: none; color: inherit; }
+img { display: block; max-width: 100%; }
+figure { margin: 0; }
+
+
+.cabecera {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 16px 6%;
+    background: var(--oscuro);
+    color: white;
+}
+
+.marca { display: flex; align-items: center; gap: 13px; font-size: 19px; font-weight: 900; letter-spacing: 1px; line-height: 1.1; }
+.marca small { display: block; margin-top: 4px; color: #c7b9d1; font-size: 9px; font-weight: bold; letter-spacing: 2.5px; }
+.marca-icono { display: grid; place-items: center; width: 46px; height: 46px; background: var(--rosa); color: var(--oscuro); font-size: 17px; border-radius: 50%; }
+.menu { display: flex; flex-wrap: wrap; gap: 26px; font-size: 13px; font-weight: 700; letter-spacing: .3px; }
+.menu a { border-bottom: 2px solid transparent; padding-bottom: 4px; transition: .2s; }
+.menu a:hover { color: var(--naranja); border-color: var(--naranja); }
+
+
+.portada {
+    min-height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 70px 6% 25px;
+    color: white;
+    background: linear-gradient(90deg, rgba(11,12,28,.87) 0%, rgba(13,16,36,.55) 49%, rgba(12,18,37,.1) 100%),
+                linear-gradient(0deg, rgba(7,9,20,.8), transparent 40%),
+                url("imagenes/Vice_City_27.jpg") center center / cover no-repeat;
+}
+
+.portada-contenido { max-width: 800px; margin-top: 60px; }
+.etiqueta { display: inline-block; padding: 7px 13px; border: 1px solid rgba(255,255,255,.5); border-radius: 30px; font-size: 11px; font-weight: 800; letter-spacing: 2px; }
+.punto { display: inline-block; width: 5px; height: 5px; margin: 0 8px 2px; border-radius: 50%; background: var(--naranja); }
+
+h1, h2, h3, p { margin-top: 0; }
+h1 { font-family: Impact, "Arial Black", sans-serif; font-size: clamp(90px, 15vw, 210px); line-height: .85; letter-spacing: -3px; margin: 38px 0 29px; }
+h1 span { color: #ffb4a7; }
+.subtitulo { max-width: 460px; font-size: 20px; line-height: 1.55; color: #f9eaf4; margin-bottom: 31px; }
+.boton { display: inline-block; padding: 14px 24px; background: var(--naranja); color: #191728; border: 2px solid var(--naranja); border-radius: 4px; font-size: 12px; font-weight: 900; letter-spacing: .7px; transition: .2s; }
+.boton:hover { background: white; border-color: white; transform: translateY(-2px); }
+.boton span { margin-left: 10px; font-size: 17px; }
+.portada-pie { display: flex; justify-content: space-between; gap: 15px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.3); font-size: 11px; font-weight: bold; letter-spacing: 1px; color: #f8e5ed; }
+
+
+.seccion { max-width: 1260px; margin: 0 auto; padding: 100px 36px; }
+.introduccion { display: grid; grid-template-columns: .95fr 1.05fr; align-items: center; gap: 70px; }
+.numero { display: block; margin-bottom: 23px; color: #b45276; font-size: 12px; font-weight: 900; letter-spacing: 2px; }
+h2 { font-family: Impact, "Arial Black", sans-serif; font-weight: normal; font-size: clamp(45px, 5.2vw, 76px); line-height: 1.05; letter-spacing: -.5px; margin-bottom: 30px; }
+h2 em { font-style: normal; color: #d75e84; }
+.texto-intro p, .historia-textos p, .ubicacion-texto p { font-size: 16px; line-height: 1.9; }
+.detalle { display: flex; align-items: center; gap: 12px; margin-top: 28px; font-weight: 800; letter-spacing: 2px; color: #98536e; font-size: 10px; }
+.detalle-raya { width: 37px; height: 2px; background: #dc7197; }
+.foto-monumento img { width: 100%; min-height: 390px; object-fit: cover; border-radius: 6px; box-shadow: 24px 24px 0 #f5d7dc; }
+figcaption { margin-top: 19px; font-size: 12px; color: #716978; }
+
+
+.franja-historia { background: var(--azul); color: white; }
+.historia-grid { display: grid; grid-template-columns: 1fr 1.25fr; gap: 80px; }
+.numero.claro { color: #ffb6c9; }
+.historia-grid h2 em { color: var(--naranja); }
+.historia-textos h3 { color: #ffc4ce; font-size: 19px; line-height: 1.4; margin-bottom: 10px; }
+.historia-textos p { color: #e3dfeb; margin-bottom: 36px; }
+.historia-textos p:last-child { margin-bottom: 0; }
+
+
+.encabezado-seccion { display: flex; align-items: end; justify-content: space-between; gap: 25px; margin-bottom: 25px; }
+.encabezado-seccion h2 { margin-bottom: 0; }
+.sello { display: block; border: 2px solid #d86993; border-radius: 50%; padding: 23px 15px; width: 126px; color: #a84b76; text-align: center; transform: rotate(-12deg); font-size: 11px; font-weight: 900; letter-spacing: 1px; line-height: 1.3; }
+table { border-collapse: collapse; width: 100%; font-size: 15px; background: white; box-shadow: 0 14px 45px rgba(17,20,37,.07); }
+caption { text-align: left; color: #69677a; font-size: 13px; padding-bottom: 13px; }
+thead { background: var(--azul); color: white; }
+th, td { text-align: left; padding: 16px 20px; border-bottom: 1px solid #e9e6eb; }
+thead th { font-size: 12px; letter-spacing: 1px; }
+tbody th { width: 35%; color: #a64770; font-weight: 800; }
+tbody tr:nth-child(even) { background: #fff6f5; }
+
+
+.galeria { padding-top: 42px; }
+.ayuda-galeria { font-size: 11px; font-weight: 900; color: #8a778b; letter-spacing: 1px; }
+.galeria-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.tarjeta-foto { background: white; overflow: hidden; border-radius: 5px; box-shadow: 0 10px 30px rgba(23,19,37,.06); }
+.tarjeta-foto img { width: 100%; height: 245px; object-fit: cover; transition: transform .3s; }
+.tarjeta-foto:hover img { transform: scale(1.04); }
+.tarjeta-foto figcaption { display: flex; align-items: center; gap: 13px; margin: 0; padding: 19px; color: var(--texto); font-size: 14px; font-weight: 800; }
+.tarjeta-foto figcaption span { color: #cf6791; }
+
+
+.ubicacion { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: center; padding-top: 60px; }
+.boton-oscuro { background: var(--azul); border-color: var(--azul); color: white; margin-top: 11px; }
+.boton-oscuro:hover { background: #d8628e; border-color: #d8628e; }
+.ubicacion-visual { position: relative; }
+.ubicacion-visual img { width: 100%; height: 395px; object-fit: cover; border-radius: 6px; }
+.ubicacion-label { position: absolute; left: 20px; bottom: 20px; right: 20px; padding: 17px 20px; background: rgba(17,19,33,.88); color: white; border-left: 4px solid var(--naranja); }
+.ubicacion-label span { display: block; color: #f6bad1; font-size: 10px; font-weight: 800; letter-spacing: 1.5px; }
+.ubicacion-label strong { display: block; margin-top: 4px; font-size: 16px; }
+
+
+.pie-pagina { display: flex; justify-content: space-between; align-items: center; gap: 30px; flex-wrap: wrap; background: var(--oscuro); padding: 35px 6%; color: white; font-size: 12px; }
+.pie-pagina div strong { display: block; font-family: Impact, "Arial Black", sans-serif; font-size: 28px; letter-spacing: 1px; }
+.pie-pagina div span, .pie-pagina p { color: #d2c8d8; margin: 0; }
+.pie-pagina a { color: var(--naranja); font-size: 11px; font-weight: 900; letter-spacing: .5px; }
+.pie-pagina a:hover { text-decoration: underline; }
+
+
+@media (max-width: 850px) {
+    .cabecera { align-items: flex-start; flex-direction: column; gap: 20px; }
+    .menu { gap: 16px; }
+    .portada { min-height: 630px; }
+    .introduccion, .historia-grid, .ubicacion { grid-template-columns: 1fr; gap: 38px; }
+    .galeria-grid { grid-template-columns: repeat(2, 1fr); }
+    .foto-monumento img { box-shadow: 12px 12px 0 #f5d7dc; }
+}
+
+@media (max-width: 560px) {
+    .cabecera { padding: 17px 5%; }
+    .menu { font-size: 12px; gap: 12px; }
+    .portada { padding: 45px 5% 20px; min-height: 600px; background-position: 65% center; }
+    .portada-contenido { margin-top: 60px; }
+    h1 { font-size: 86px; }
+    .subtitulo { font-size: 17px; }
+    .portada-pie { flex-direction: column; font-size: 9px; }
+    .seccion { padding: 65px 20px; }
+    .galeria { padding-top: 5px; }
+    .galeria-grid { grid-template-columns: 1fr; }
+    .encabezado-seccion { align-items: start; }
+    .sello, .ayuda-galeria { display: none; }
+    th, td { padding: 12px; font-size: 13px; }
+    tbody th { width: 39%; }
+    .ubicacion-visual img { height: 300px; }
+}
